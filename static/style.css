@@ -1,6 +1,30 @@
+footer {
+  text-align: center;
+  font-family: arial;
+  font-size: 15px;
+  background-color: rgb(34, 155, 108);
+  color: black;
+}
+#logo
+{
+  height: 80px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#banner{
+        height: 550px;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+}
 #container{
  max-width: 1400px;
   margin: 0 auto 0 auto;
+  padding-bottom: 30px;
 }
 .checkmark {
   position: absolute;
@@ -11,12 +35,12 @@
   background-color: #eee;
 }
 
-.container:hover input ~ .checkmark {
+.checker:hover input ~ .checkmark {
   background-color: #ccc;
 }
       
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
+.checker input:checked ~ .checkmark {
+  background-color: #175cb5;
 }
       
 .checkmark:after {
@@ -25,11 +49,11 @@
   display: none;
 }
 
-.container input:checked ~ .checkmark:after {
+.checker input:checked ~ .checkmark:after {
   display: block;
 }
 
-.container .checkmark:after {
+.checker .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -39,4 +63,13 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.list-group-item
+{
+  padding-bottom: 10px !important;
+  font-size: 18px;
+}
+.list-group-item input
+{
+  cursor: pointer;
 }

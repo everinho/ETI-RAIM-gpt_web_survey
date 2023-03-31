@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
     <meta name="author" content="Antoni Górecki, Matthias Nawrocki">
+    
     <title>Ankieta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <style>
@@ -15,34 +16,30 @@
           letter-spacing: 0,5px;
           text-shadow: 2px 2px rgb(0,0,0);
         }
-      #banner{
-        height: 550px;
-        object-fit: cover;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 70%;
-      }
       h2 {
         font-family: arial;
         font-size: 40px;
         color: rgb(77, 214, 146) ;
         text-align: center;
-        text-shadow: 2px 2px rgb(0,0,0);
+        text-shadow: 1.5px 1.5px rgb(0,0,0);
       }
-      .container {
+      h5
+      {
+        margin-top: 30px;
+      }
+      .checker {
         display: block;
         position: relative;
         padding-left: 35px;
         margin-bottom: 12px;
         cursor: pointer;
-        font-size: 22px;
+        font-size: 18px;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
       }
-      .container input {
+      .checker input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
@@ -67,4 +64,9 @@
       </div>
     </div>
   </body>
+  <footer>
+    <img id="logo" src="https://eti-raim-gptwebsurvey.everinho.repl.co/static/pg_poziome_logo_czarne.png">
+    <p>Autorzy: <b>Antoni Górecki, Matthias Nawrocki</b></p>
+    <p>&copy Wszelkie prawa zastrzeżone </p>
+</footer>
 </html>

@@ -1,4 +1,15 @@
-footer {
+html { height: 100%; }
+body {
+    min-height:100%; 
+    position:relative; 
+    padding-bottom:[footer-height] 
+}
+.footer { 
+  position: absolute; 
+  left: 0 ; right: 0; bottom: 0; 
+  height:[footer-height];
+}
+footer{
   text-align: center;
   font-family: arial;
   font-size: 15px;
@@ -25,6 +36,7 @@ footer {
  max-width: 1400px;
   margin: 0 auto 0 auto;
   padding-bottom: 30px;
+  min-height: 100%;
 }
 .checkmark {
   position: absolute;
@@ -72,4 +84,14 @@ footer {
 .list-group-item input
 {
   cursor: pointer;
+}
+input[type=text]
+{
+  height:50px;
+  width: 1400px;
+  font-size:14pt;
+  font-family: arial;
+}
+input[type=text]:focus {
+  background-color: lightblue;
 }

@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
+from database import full_db
 
 app = Flask(__name__)
 
@@ -20,6 +21,8 @@ def hello_world():
 @app.route("/form/end", methods=['get'])
 def poll_submit():
   data = request.args
+
+  full_db(data)
   return render_template('end.html', answers = data)
 
 if __name__ == "__main__":

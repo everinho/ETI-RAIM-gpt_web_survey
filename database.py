@@ -1,10 +1,10 @@
 import os
 from sqlalchemy import create_engine, text
 
-db_connection_string = os.environ['DB_CONNECTION_STRING']
-db_connect = os.environ['db_connect']
+# db_connection_string = os.environ['DB_CONNECTION_STRING']
+my_secret = os.environ['db_connect']
 
-engine = create_engine(db_connect, connect_args = {
+engine = create_engine(my_secret, connect_args = {
   "ssl": {
     "ssl_ca": "/etc/ssl/cert.pem"
   }
@@ -13,7 +13,7 @@ engine = create_engine(db_connect, connect_args = {
 def full_db(answers):
   with engine.connect() as conn:
     query = text("INSERT INTO answers (wiek, plec, wyksztalcenie, miejscezamieszkania, wiedza, praca, zadania, efektywnosc, rozrywka, ocena, watpliwosci, klamstwo, leczenie, choroby, uleczalnosc, wyborchorob, terapia, ibm, krzeslo, wypowiedz, udar, zastosowanie, korzysci, aspekty ) VALUES (:wiek, :plec, :wyksztalcenie, :miejscezamieszkania, :wiedza, :praca, :zadania, :efektywnosc, :rozrywka, :ocena, :watpliwosci, :klamstwo, :leczenie, :choroby, :uleczalnosc, :wyborchorob, :terapia, :ibm, :krzeslo, :wypowiedz, :udar, :zastosowanie, :korzysci, :aspekty)")
-  conn.execute(query, {})
+  conn.execute(query, {'wiek': answers['wiek'], 'plec': answers['plec'],'wyksztalcenie': answers['wyksztalcenie'],'miejscezamieszkania': answers['miejscezamieszkania'],'wiedza': answers['wiedza'],'praca': answers['praca'],'zadania': answers['zadania'],'efektywnosc': answers['efektywnosc'],'rozrywka': answers['rozrywka'],'ocena': answers['ocena'],'watpliwosci': answers['watpliwosci'],'klamstwo': answers['klamstwo'],'leczenie': answers['leczenie'], 'choroby': answers['choroby'], 'uleczalnosc': answers['uleczalnosc'], 'wyborchorob': answers['wyborchorob'], 'terapia': answers['terapia'], 'ibm': answers['ibm'], 'krzeslo': answers['krzeslo'], 'wypowiedz': answers['wypowiedz'], 'udar': answers['udar'], 'zastosowanie': answers['zastosowanie'], 'korzysci': answers['korzysci'], 'aspekty': answers['aspekty']})
 
 # engine = create_engine(
 #   db_connection_string, 

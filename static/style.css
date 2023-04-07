@@ -1,3 +1,17 @@
+.box{
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-top: 507px;
+  margin-bottom: 0px;
+}
+#logo2
+{
+  height: 80px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .pos {
   height: 50px;
   position: relative;
@@ -19,7 +33,7 @@ body {
     padding-bottom:[footer-height] 
 }
 .footer { 
-  position: absolute; 
+  position: absolute;
   left: 0 ; right: 0; bottom: 0; 
   height:[footer-height];
 }

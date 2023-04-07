@@ -11,19 +11,19 @@ def hello_world():
 # def final_page():   
 #     return render_template('end.html')
 
-# @app.route("/form/end", methods=['get'])
-# def submit_page():   
-#   data = request.form
-
-#   add_answers_to_db(data)
-#   return render_template('end.html', data=data)
-
 @app.route("/form/end", methods=['get'])
-def poll_submit():
+def submit_page():   
   data = request.args
 
   full_db(data)
-  return render_template('end.html', answers = data)
+  return render_template('end.html', data=data)
+
+# @app.route("/form/end", methods=['get'])
+# def poll_submit():
+#   data = request.args
+
+#   full_db(data)
+#   return render_template('end.html', answers = data)
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)

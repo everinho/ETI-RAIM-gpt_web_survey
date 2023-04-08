@@ -1,11 +1,14 @@
+#tekst{
+  font-family: arial;
+  font-size: 20px;
+}
 .box{
   display: grid;
   grid-template-rows: 1fr auto;
-  margin-top: 507px;
-  margin-bottom: 0px;
+  margin-top: 170px;
+  margin-bottom: 0;
 }
-#logo2
-{
+#logo2{
   height: 80px;
   object-fit: cover;
   display: block;
@@ -30,7 +33,7 @@ html { height: 100%; }
 body {
     min-height:100%; 
     position:relative; 
-    padding-bottom:[footer-height] 
+    padding-bottom:[footer-height]   
 }
 .footer { 
   position: absolute;
@@ -44,8 +47,7 @@ footer{
   background-color: rgb(34, 155, 108);
   color: black;
 }
-#logo
-{
+#logo{
   height: 80px;
   object-fit: cover;
   display: block;
@@ -53,12 +55,12 @@ footer{
   margin-right: auto;
 }
 #banner{
-        height: 550px;
-        object-fit: cover;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 70%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 #container{
  max-width: 1400px;
@@ -66,55 +68,16 @@ footer{
   padding-bottom: 30px;
   min-height: 100%;
 }
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-.checker:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-      
-.checker input:checked ~ .checkmark {
-  background-color: #175cb5;
-}
-      
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.checker input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.checker .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.list-group-item
-{
+.list-group-item{
   padding-bottom: 10px !important;
   font-size: 18px;
+  font-family: arial;
 }
-.list-group-item input
-{
+.list-group-item input{
   cursor: pointer;
+  background-color: lightgray;
 }
-input[type=text]
-{
+input[type=text]{
   height:50px;
   width: 1400px;
   font-size:14pt;
@@ -123,3 +86,6 @@ input[type=text]
 input[type=text]:focus {
   background-color: lightblue;
 }
+
+
+
